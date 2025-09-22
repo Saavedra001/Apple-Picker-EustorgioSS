@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Basket : MonoBehaviour
 {
@@ -48,5 +49,16 @@ public class Basket : MonoBehaviour
             scoreCounter.score += 100;
             HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
         }
+
+        //rotten apple hits the basket
+
+        else if (collidedWith.CompareTag("Branch"))
+        {
+        Destroy(collidedWith);
+    PlayerPrefs.SetInt("LastScore",scoreCounter.score);
+        SceneManager.LoadScene("GameOverScreen");
     }
+
+    }
+
 }

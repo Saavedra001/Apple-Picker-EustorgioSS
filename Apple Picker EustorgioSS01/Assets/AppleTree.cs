@@ -7,9 +7,13 @@ public class AppleTree : MonoBehaviour
     [Header("Inscribed")]
 
     public GameObject applePrefab;
+    // public GameObject rottenApplePrefab;
+
+    public GameObject branchPreFab;
+    public float branchChance = 0.4f;
 
     //speed at which the appletree moves
-    public  float speed = 1f;
+    public float speed = 1f;
 
     //distance where AppleTree turns around
     public float leftAndRightEdge = 10f;
@@ -26,12 +30,23 @@ public class AppleTree : MonoBehaviour
         //start dropping apples
         Invoke( "DropApple",2f); 
     }
+    //ORIGINAL CODE FROM THE BOOK FOR DROPPING APPLES
+    // void DropApple(){
+    //     GameObject apple = Instantiate<GameObject>(applePrefab);
+    //     apple.transform.position = transform.position;
+    //     Invoke( "DropApple",appleDropDelay);
+    // }
 
-    void DropApple(){
-        GameObject apple = Instantiate<GameObject>(applePrefab);
-        apple.transform.position = transform.position;
-        Invoke( "DropApple",appleDropDelay);
-    }
+    //UPDATED VERSION FOR ROTTEN AND REGULAR APPLES
+    void DropApple() {
+    GameObject toDrop = (Random.value < branchChance) ? branchPreFab : applePrefab;
+
+    GameObject obj = Instantiate<GameObject>(toDrop);
+    obj.transform.position = transform.position;
+
+    Invoke("DropApple", appleDropDelay);
+}
+
 
     // Update is called once per frame
     void Update()

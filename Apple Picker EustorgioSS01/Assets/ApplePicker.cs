@@ -51,7 +51,18 @@ public class ApplePicker : MonoBehaviour
         //If there are no baskets left, restart the game
         if (basketList.Count == 0)
         {
-            SceneManager.LoadScene("_Scene_0");
+            // int lastScore = 0;
+            // varscGo = GameObject.Find("ScoreCounter");
+            // if (scGo != null)
+            // {
+            //     var sc = scGO.GetComponent<ScoreCounter>();
+            //     if (sc != null) lastScore = sc.score;
+            // }
+
+            // PlayerPrefs.SetInt("LastScore", lastScore);
+
+
+            SceneManager.LoadScene("GameOverScreen");
         }
     }
 

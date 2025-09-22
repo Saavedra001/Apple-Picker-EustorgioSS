@@ -347,8 +347,12 @@
 "Assets/ApplePicker.cs"
 "Assets/AppleTree.cs"
 "Assets/Basket.cs"
+"Assets/Branch.cs"
+"Assets/GameOver.cs"
 "Assets/HighScore.cs"
+"Assets/RoundCounter.cs"
 "Assets/ScoreCounter.cs"
+"Assets/StartScreen.cs"
 -langversion:9.0
 
 /deterministic
