@@ -261,7 +261,7 @@ MonoBehaviour:
   applePrefab: {fileID: 6914855792010152263, guid: 34ef3d14dbdc6a445acfc76496362883, type: 3}
   branchPreFab: {fileID: 6914855792010152263, guid: ffbf1a68af43e4e42b770f0faf048b8b, type: 3}
   branchChance: 0.4
-  speed: 20
+  speed: 30
   leftAndRightEdge: 24
   changeDirChance: 0.1
   appleDropDelay: 1

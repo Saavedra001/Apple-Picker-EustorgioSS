@@ -7,7 +7,7 @@ public class RoundCounter : MonoBehaviour
 {
     public Text uiText;
     public ScoreCounter scoreCounter;    // drag your ScoreCounter here (or it will find it)
-    public int pointsPerRound = 500;     // change to taste
+    public int pointsPerRound = 1500;     // change to taste
     public int maxRounds = 4;
 
     public static int CURRENT_ROUND = 1;
